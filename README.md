@@ -45,6 +45,18 @@ Then choose **Run All**. It takes about 5 minutes on a laptop and rewrites `pred
 
 The notebook explains each step and each choice in more detail.
 
+## Validation Strategy.
+
+We want to know how well a model will do on rents it has never seen, so we set aside 20% of the training rows (1,480 of 7,398) and do not touch them until the final model is chosen. The other 5,918 rows are split into 5 folds: each model trains on 4 folds and is scored on the 5th, five times over. Every model and every grid search uses these same folds, so the scores are comparable. Data preparation (filling gaps, scaling numbers, turning categories into columns) happens inside each fold, so the scoring rows never influence it.
+
+- **Score:** RMSE, the typical size of our miss in dollars. Lower is better. We also report MAE and R².
+- **Starting point:** always guessing the average rent misses by about $812. Any real model has to beat that.
+- **Overfitting check:** a model whose training score is much better than its fold score is memorizing, not learning.
+- **Final check:** the 1,480 held-out rows are scored once, then the final model is retrained on all 7,398 rows to make `predictions.csv`.
+- **Code:** `Angel_Validation.ipynb` (the `compare` and `holdout_rmse` functions).
+
+**Final hold-out RMSE:** _fill in after the final model is chosen_
+
 ## Progress log
 
 | Date | Change |
