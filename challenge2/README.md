@@ -13,6 +13,7 @@ Each row is one visit to an online store. We predict `Revenue`: whether the visi
 | File | What it is |
 |---|---|
 | `challenge2_validation_split.ipynb` | Loads the data and sets up the validation split |
+| `challenge2_neural_network.ipynb` | Neural network (MLP): tuning, threshold, and evaluation charts |
 | `challenge2_train.csv` | Training data, with `Revenue` |
 | `challenge2_test.csv` | Test data, no `Revenue` |
 
