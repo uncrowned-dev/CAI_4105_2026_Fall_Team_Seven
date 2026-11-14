@@ -1,0 +1,12 @@
+# Tested with Python 3.12.10. (Install in a fresh virtual environment.)
+# Main numerical and notebook dependencies are pinned for repeatable results.
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.18.1
+scikit-learn==1.7.2
+joblib==1.6.0
+threadpoolctl==3.8.0
+matplotlib==3.10.7
+nbformat==5.10.4
+nbclient==0.10.2
+ipykernel==7.1.0
