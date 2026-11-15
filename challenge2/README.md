@@ -14,6 +14,8 @@ Each row is one visit to an online store. We predict `Revenue`: whether the visi
 |---|---|
 | `challenge2_validation_split.ipynb` | Loads the data and sets up the validation split |
 | `challenge2_neural_network.ipynb` | Neural network (MLP): tuning, threshold, and evaluation charts |
+| `challenge2_knn.ipynb` | K-nearest neighbors: tuning, threshold, and evaluation charts |
+| `challenge2_decision_tree_random_forest_DAVID.ipynb` | Decision Tree and Random Forest: default vs. tuned comparison |
 | `challenge2_train.csv` | Training data, with `Revenue` |
 | `challenge2_test.csv` | Test data, no `Revenue` |
 
@@ -34,7 +36,7 @@ cd challenge2
 jupyter notebook challenge2_validation_split.ipynb
 ```
 
-## Decision Tree and Random Forest - David Willaims
+## Decision Tree and Random Forest - David Williams
 
 `challenge2_decision_tree_random_forest_DAVID.ipynb` compares the default and tuned versions of both models using the shared split and five folds.
 
@@ -58,3 +60,5 @@ jupyter notebook challenge2_decision_tree_random_forest_DAVID.ipynb
 ```
 
 Run all cells from top to bottom. The notebook creates `results_trees/` itself and includes the saved tables and charts.
+
+This README was produced with assistance from AI (Claude).
